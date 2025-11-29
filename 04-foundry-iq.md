@@ -87,7 +87,7 @@ Foundry IQ를 사용하기 위해 먼저 Azure AI Search 리소스를 연결해�
    ```
    Resource group: foundry
    Service name: foundry<Your unique name>
-   Location: East US 2
+   Location: Sweden Central
    Pricing tier: Basic
    ```
    
@@ -226,8 +226,6 @@ Storage Account와 AI Search 간의 권한을 설정합니다.
    ![Storage Account](./assets/04-10-storage-account.png)
 
    - **Access Control (IAM)** > **+ Add** > **Add role assignment**를 클릭합니다.
-   
-   ![Storage Account IAM 메뉴](./assets/04-11-storage-iam.png)
 
    ![Storage Account IAM 메뉴 Add role assignment](./assets/04-11-storage-iam-add-role-assignment.png)
 
@@ -423,12 +421,9 @@ Microsoft Foundry와 AI Search 간의 권한을 설정합니다.
 2. **Knowledge Base 생성**
 
    - **Create a knowledge base** 버튼을 클릭합니다.
-
-   ![Knowledge Base 생성](./assets/04-25-knowledge-base-create.png)
-
    - **Azure AI Search Index**를 선택하고 **Connect** 버튼을 클릭합니다.
 
-   ![Knowledge Type 선택](./assets/04-25-knowledge-type-select.png)
+   ![Knowledge Base 생성](./assets/04-25-knowledge-base-create.png)
 
    - **Knowledge source name**의 suffix 숫자를 **100**으로 변경합니다.
    - **Select Azure AI Search Index**를 선택한 후, **Create** 버튼을 클릭합니다.

@@ -128,6 +128,8 @@ Model Router를 활용하여 지능적으로 모델을 선택하는 에이전트
    - 에이전트 실행 과정 추적
    - 모델 선택 결정 확인
    - 성능 및 비용 분석
+
+   **Tracing 활성화**를 위해서 **App Insigts 생성 및 연결**이 필요합니다.
    
    ![Traces 탭 화면 - Connect](./assets/03-08-agent-traces-connect.png)
 
@@ -163,7 +165,7 @@ Model Router를 활용하여 지능적으로 모델을 선택하는 에이전트
 1. **새 에이전트 생성**
    ```
    Agent name: FileSearchAgent
-   Model: gpt-5.1 (또는 선호하는 모델)
+   Model: gpt-5.1
    ```
 
 2. **Instructions 설정**
@@ -234,6 +236,7 @@ Model Router를 활용하여 지능적으로 모델을 선택하는 에이전트
    
    ![File Search Traces 확인](./assets/03-17-filesearch-traces.png)
 
+   ![File Search Traces 확인](./assets/03-17-filesearch-traces-2.png)
 
 ### ✅ 확인 사항
 
@@ -278,7 +281,10 @@ Model Router를 활용하여 지능적으로 모델을 선택하는 에이전트
    
    ![Web search 도구 추가](./assets/03-20-websearch-add-tool.png)
 
-3. **에이전트 테스트**
+3. **에이전트 저장**
+   - **Save** 버튼을 클릭합니다.
+
+4. **에이전트 테스트**
 
    **Chat 탭에서 최신 정보 질문을 테스트합니다:**
 
@@ -299,7 +305,7 @@ Model Router를 활용하여 지능적으로 모델을 선택하는 에이전트
    
    ![WebSearchAgent 테스트](./assets/03-21-websearch-chat-test.png)
 
-4. **Traces 분석**
+5. **Traces 분석**
 
    - **Traces** 탭에서 웹 검색 과정 확인:
      - 검색 쿼리
@@ -309,8 +315,7 @@ Model Router를 활용하여 지능적으로 모델을 선택하는 에이전트
    
    ![Web Search Traces 확인](./assets/03-22-websearch-traces.png)
 
-5. **에이전트 저장**
-   - **Save** 버튼을 클릭합니다.
+   ![Web Search Traces 확인](./assets/03-22-websearch-traces-2.png)
 
 ### 💡 Web Search 활용 팁
 
