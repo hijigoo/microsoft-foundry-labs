@@ -184,7 +184,7 @@ AI Search가 Foundry 리소스에 접근할 수 있도록 Managed Identity를 �
    ```
    Resource group: foundry
    Storage account name: foundry<Your unique name>
-   Region: East US 2
+   Region: Sweden Central
    Preferred storage type: Azure Blob Storage
    Primary workload: Cloud native
    Performance: Standard
