@@ -67,6 +67,7 @@ Model Router를 활용하여 지능적으로 모델을 선택하는 에이전트
 
 2. **새 에이전트 생성**
    - **+ Create agent** 또는 **New agent** 버튼을 클릭합니다.
+   - Agent name은 'ModelRouterAgent'를 입력한 후 **Create** 버튼을 클릭합니다.
    
    ![Create agent 버튼](../assets/03-02-create-agent.png)
 
@@ -94,19 +95,23 @@ Model Router를 활용하여 지능적으로 모델을 선택하는 에이전트
    ```
    안녕
    ```
-   → 간단한 인사이므로 경량 모델 사용
+   → 간단한 인사이므로 경량 모델 사용  
+  
+
 
    ```
    너는 언제까지의 데이터로 학습되어있니?
    ```
-   → 모델 정보 질문, 기본 모델로 답변
-
+   → 모델 정보 질문, 기본 모델로 답변  
+     
+     
    ```
    microsoft foundry new portal 실습을 위한 실습 가이드를 만들어줘. 
    foundry models, model-router, foundry agents, foundry tools, foundry knowledge, 
    foundry control plane 등을 모두 foundry portal에서 실습하는 가이드가 필요해
    ```
    → 복잡한 문서 생성 요청이므로 고성능 모델 사용
+
    
    ![Chat 탭에서 테스트](../assets/03-05-agent-chat-test.png)
 
@@ -130,13 +135,20 @@ Model Router를 활용하여 지능적으로 모델을 선택하는 에이전트
    - 성능 및 비용 분석
 
    **Tracing 활성화**를 위해서 **App Insigts 생성 및 연결**이 필요합니다.
-   **Agent Tracing**은 Foundry(New)의 **Sweden Central**에서만 가능합니다.
+   **Agent Tracing**은 Foundry(New)를 지원하는 모든 리전에서 사용 가능합니다.
+
+   - 아래 캡쳐 화면의 **Connect** 클릭
    
-   ![Traces 탭 화면 - Connect](../assets/03-08-agent-traces-connect.png)
+   ![Traces 탭 화면 - Connect](../assets/03-08-agent-traces-connect.png)  
+     
+   - 아래 캡쳐 화면의 **Create** 클릭
 
-   ![Traces 탭 화면 - Create](../assets/03-08-agent-traces-create.png)
+   ![Traces 탭 화면 - Create](../assets/03-08-agent-traces-create-revised.png)  
+  
+   - 아래 캡쳐 화면의 아무 **Conversation ID**나 클릭
 
-   ![Traces 탭 화면 - Traces](../assets/03-08-agent-traces.png)
+   ![Traces 탭 화면 - Traces](../assets/03-08-agent-traces.png)  
+
 
    ![Traces 탭 화면 - Traces - Details](../assets/03-08-agent-traces-details.png)
 
@@ -191,17 +203,15 @@ Model Router를 활용하여 지능적으로 모델을 선택하는 에이전트
    - **Tools** 섹션에서 **+ Add** 버튼을 클릭합니다.
    
    - **File Search** 옵션을 선택합니다.
-   - File Search가 Tools 목록에 추가되었는지 확인합니다.
    
    ![File Search 도구 선택](../assets/03-13-filesearch-tool-selection.png)
 
 4. **파일 업로드**
 
-   - **Tools > File Search** 섹션에서 **Attach files** 버튼을 클릭합니다.
+   - [knowledge-base.json](../knowledge-base.json) 파일을 업로드한 후 **Attach**버튼을 누릅니다.
    
    ![Attach files 버튼](../assets/03-14-filesearch-attach-files.png)
    
-   - [knowledge-base.json](../knowledge-base.json) 파일을 업로드합니다.
    - 파일이 정상적으로 업로드되었는지 확인합니다.
    
    ![파일 업로드 완료](../assets/03-15-filesearch-file-uploaded.png)
@@ -274,7 +284,7 @@ Model Router를 활용하여 지능적으로 모델을 선택하는 에이전트
 2. **Web Search Tool 추가**
 
    - **Tools** 섹션에서 **+ Add** 버튼을 클릭합니다.
-   - **Web search** 옵션을 선택합니다.
+   - **Web search** 옵션을 선택한 후 **Add tool** 버튼을 클릭합니다.
    - Web Search가 활성화되었는지 확인합니다.
    
    ![Web search 도구 추가](../assets/03-20-websearch-add-tool.png)
@@ -385,45 +395,47 @@ az login --tenant <tenant-id>
 
 > 💡 **실습 팁**: 아래 코드는 참고용입니다. 실제 실습 시에는 이 저장소의 루트 경로에 있는 `invokeAgent.py` 파일을 열어 `FOUNDRY_ENDPOINT`와 `AGENT_NAME` 값을 본인 환경에 맞게 수정한 후 실행하세요.
 
+- `FOUNDRY_ENDPOINT`는 아래 캡쳐화면 참고
+   ![foundry endpoint](../assets/03-foundry-endpoint.png)
 `invokeAgent.py` 파일 예시:
 
-```python
-# Microsoft Foundry Agent Invocation using Activity Protocol
-from openai import OpenAI
-from azure.identity import DefaultAzureCredential, get_bearer_token_provider
+   ```python
+   # Microsoft Foundry Agent Invocation using Activity Protocol
+   from openai import OpenAI
+   from azure.identity import DefaultAzureCredential, get_bearer_token_provider
 
-# TODO: Update these values with your actual Microsoft Foundry details
-# Get these from: https://ai.azure.com → Your Project → Deployments
-FOUNDRY_ENDPOINT = "https://<foundry-resource-name>.services.ai.azure.com/api/projects/<project-name>"
-AGENT_NAME = "ModelRouterAgent"  # 호출할 에이전트 이름
-API_VERSION = "2025-11-15-preview"
+   # TODO: Update these values with your actual Microsoft Foundry details
+   # Get these from: https://ai.azure.com → Your Project → Deployments
+   FOUNDRY_ENDPOINT = "https://<foundry-resource-name>.services.ai.azure.com/api/projects/<project-name>"
+   AGENT_NAME = "ModelRouterAgent"  # 호출할 에이전트 이름
+   API_VERSION = "2025-11-15-preview"
 
-# Create OpenAI client with Azure authentication
-client = OpenAI(
-    api_key=get_bearer_token_provider(
-        DefaultAzureCredential(), 
-        "https://ai.azure.com/.default"
-    ),
-    base_url=f"{FOUNDRY_ENDPOINT}/applications/{AGENT_NAME}/protocols/openai",
-    default_query={"api-version": API_VERSION}
-)
+   # Create OpenAI client with Azure authentication
+   client = OpenAI(
+      api_key=get_bearer_token_provider(
+         DefaultAzureCredential(), 
+         "https://ai.azure.com/.default"
+      ),
+      base_url=f"{FOUNDRY_ENDPOINT}/applications/{AGENT_NAME}/protocols/openai",
+      default_query={"api-version": API_VERSION}
+   )
 
-try:
-    # Call the agent using responses API
-    response = client.responses.create(
-        input="제주도 2박 3일 여행 코스 추천해줘"
-    )
-    
-    print(f"Response: {response.output_text}")
-    
-except Exception as e:
-    print(f"Error: {e}")
-    print("\n🔍 Troubleshooting:")
-    print("1. Check your endpoint URL at https://ai.azure.com")
-    print("2. Verify the project name and agent name exist")
-    print("3. Ensure you're logged in: az login")
-    print("4. Confirm the agent is deployed and running")
-```
+   try:
+      # Call the agent using responses API
+      response = client.responses.create(
+         input="제주도 2박 3일 여행 코스 추천해줘"
+      )
+      
+      print(f"Response: {response.output_text}")
+      
+   except Exception as e:
+      print(f"Error: {e}")
+      print("\n🔍 Troubleshooting:")
+      print("1. Check your endpoint URL at https://ai.azure.com")
+      print("2. Verify the project name and agent name exist")
+      print("3. Ensure you're logged in: az login")
+      print("4. Confirm the agent is deployed and running")
+   ```
 
 #### 3. 엔드포인트 정보 확인
 
