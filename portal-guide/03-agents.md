@@ -84,7 +84,7 @@ Model Router를 활용하여 지능적으로 모델을 선택하는 에이전트
    
    **Save** 버튼을 클릭하여 저장합니다.
 
-   ![에이전트 기본 설정](../assets/03-03-agent-basic-settings.png)
+   ![에이전트 기본 설정](../assets/03-03-agent-basic-settings-no-instruction.png)
 
 4. **에이전트 테스트**
 

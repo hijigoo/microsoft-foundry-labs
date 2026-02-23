@@ -111,15 +111,14 @@ Foundry는 다음을 자동화합니다:
 
    ![Data 설정 (Synthetic generation)](../assets/06-04-evaluation-data3.png)
 
-   ```
    Data source: Synthetic generation
    
-   Topic: 일반 대화 및 정보 제공
-   
-   Number of samples: 50
+   Number of rows: 50
    (더 많은 샘플은 더 신뢰할 수 있지만 시간이 더 걸림)
    
-   Languages: Korean, English
+   Prompt
+   ```
+   일반 대화 및 정보 제공
    ```
 
    **Synthetic Generation이란?**
@@ -131,7 +130,7 @@ Foundry는 다음을 자동화합니다:
    - **Upload dataset**: CSV/JSON 파일 업로드
    - **Use existing dataset**: 이전에 저장한 데이터셋 사용
 
-6. **Criteria 선택**
+1. **Criteria 선택**
 
    평가 기준을 선택합니다:
 
@@ -146,7 +145,7 @@ Foundry는 다음을 자동화합니다:
 
    각 기준에 대한 상세 설명은 아래 섹션을 참조하세요.
 
-7. **Review**
+2. **Review**
 
    설정을 검토합니다:
    
@@ -160,7 +159,7 @@ Foundry는 다음을 자동화합니다:
    Estimated cost: $2-5 (샘플 수에 따라 다름)
    ```
 
-8. **Submit**
+3. **Submit**
 
    - 모든 설정을 확인한 후 **Submit** 버튼을 클릭합니다.
    - 평가가 백그라운드에서 실행됩니다.
@@ -168,7 +167,7 @@ Foundry는 다음을 자동화합니다:
 
    ![Evaluation Run](../assets/06-06-evaluation-run.png)
 
-9. **Evaluation Result**
+4. **Evaluation Result**
 
    ![Evaluation Result](../assets/06-06-evaluation-result.png)
 
