@@ -111,7 +111,7 @@ Model Router를 활용하여 지능적으로 모델을 선택하는 에이전트
    → 복잡한 문서 생성 요청이므로 고성능 모델 사용
 
    
-   ![Chat 탭에서 테스트](../assets/03-05-agent-chat-test.png)
+   ![Chat 탭에서 테스트](../assets/03-05-agent-chat-test-no-instruction.png)
 
 5. **추가 탭 탐색**
 
@@ -119,13 +119,13 @@ Model Router를 활용하여 지능적으로 모델을 선택하는 에이전트
    - 에이전트 설정을 YAML 형식으로 확인
    - Infrastructure as Code로 관리 가능
    
-   ![YAML 탭 화면](../assets/03-06-agent-yaml.png)
+   ![YAML 탭 화면](../assets/03-06-agent-yaml-no-instruction.png)
    
    **Code 탭**:
    - 에이전트를 코드로 호출하는 샘플 확인
    - Python, JavaScript, C# 등 다양한 언어 지원
    
-   ![Code 탭 화면](../assets/03-07-agent-code.png)
+   ![Code 탭 화면](../assets/03-07-agent-code-no-instruction.png)
 
    **Traces 탭**:
    - 에이전트 실행 과정 추적
