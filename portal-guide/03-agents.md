@@ -261,7 +261,7 @@ Model Router를 활용하여 지능적으로 모델을 선택하는 에이전트
 1. **새 에이전트 생성**
    ```
    Agent name: WebSearchAgent
-   Model: gpt-4.1
+   Model: gpt-5.1
    ```
    
    **Instructions 설정**
