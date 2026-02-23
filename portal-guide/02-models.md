@@ -120,7 +120,7 @@ Embedding 모델은 텍스트를 벡터로 변환하여 의미적 검색 및 유
 ### 단계별 가이드
 
 1. **Embedding 모델 검색**
-   - Discover > Models 페이지에서 검색창에 **"text-embedding"**을 입력합니다.
+   - Discover > Models 페이지에서 검색창에 **text-embedding**을 입력합니다.
    - 필터를 사용하여 Embedding 모델만 표시할 수 있습니다.
    
    ![text-embedding 검색](../assets/02-08-embedding-search.png)
@@ -145,7 +145,7 @@ Model Router는 여러 모델 간의 지능형 라우팅을 제공하여 비용,
 ### 단계별 가이드
 
 1. **Model Router 검색**
-   - Discover > Models에서 **"model-router"**를 검색합니다.
+   - Discover > Models에서 **model-router**를 검색합니다.
    
    ![model-router 검색](../assets/02-11-model-router-search.png)
 
@@ -156,18 +156,13 @@ Model Router는 여러 모델 간의 지능형 라우팅을 제공하여 비용,
      - 비용 최적화
      - 품질 기반 라우팅
 
-3. **배포 설정**
-   ```
-   Deployment name: model-router
-   Routing strategy: Balanced (기본값)
-   Included models: [사용 가능한 모델 자동 감지]
-   ```
-   
+3. **배포 진행**
+   - Default settings로 배포 진행
+   - Model Router가 사용할 수 있는 배포된 모델들을 자동으로 감지합니다.
+
    ![Model Router 배포 설정](../assets/02-12-model-router-deploy.png)
 
-4. **배포 완료**
-   - **Deploy** 버튼을 클릭합니다.
-   - Model Router가 사용할 수 있는 배포된 모델들을 자동으로 감지합니다.
+  
 
 ### ✅ 확인 사항
 
@@ -175,7 +170,7 @@ Model Router는 여러 모델 간의 지능형 라우팅을 제공하여 비용,
 - 배포 상태 확인
 - Router가 접근 가능한 모델 목록 확인
 
-![Build > Models 전체 배포 목록](../assets/02-15-models-overview.png)
+   ![Build > Models 전체 배포 목록](../assets/02-15-models-overview.png)
 
 ---
 
