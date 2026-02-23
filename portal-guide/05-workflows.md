@@ -70,11 +70,11 @@ Workflow {
 
 #### 1. TravelPlannerAgent
 
-Agent name: TravelPlannerAgent
-Description: 여행 목적지와 일정을 기획하는 에이전트
-Model: gpt-5.1
+- Agent name: TravelPlannerAgent
+- Description: 여행 목적지와 일정을 기획하는 에이전트
+- Model: gpt-5.1
 
-Instructions:
+- Instructions:
 
 ```
 당신은 여행 계획 전문가입니다.
@@ -98,13 +98,13 @@ Instructions:
 #### 2. LocalAgent
 
 
-Agent name: LocalAgent
-Description: 현지 정보를 추가하는 에이전트
-Model: gpt-5.1
+- Agent name: LocalAgent
+- Description: 현지 정보를 추가하는 에이전트
+- Model: gpt-5.1
 
-Tools: Web search (활성화)
+- Tools: Web search (활성화)
 
-Instructions:
+- Instructions:
 
 ```
 당신은 현지 정보 전문가입니다.
@@ -130,11 +130,11 @@ Instructions:
 
 #### 3. TravelSummaryAgent
 
-Agent name: TravelSummaryAgent
-Description: 여행 계획을 요약하고 최종 체크리스트를 만드는 에이전트
-Model: gpt-5.1
+- Agent name: TravelSummaryAgent
+- Description: 여행 계획을 요약하고 최종 체크리스트를 만드는 에이전트
+- Model: gpt-5.1
 
-Instructions:
+- Instructions:
 
 ```
 당신은 여행 계획 정리 전문가입니다.
@@ -347,9 +347,9 @@ Instructions:
 #### 1. StudentAgent
 
 
-Agent name: StudentAgent
-Description: 질문에 답변하는 학생 역할
-Model: gpt-5.1
+- Agent name: StudentAgent
+- Description: 질문에 답변하는 학생 역할
+- Model: gpt-5.1
 
 
 Instructions:
@@ -375,9 +375,9 @@ Instructions:
 #### 2. TeacherAgent
 
 
-Agent name: TeacherAgent
-Description: 답변을 평가하고 개선을 요청하는 교사 역할
-Model: gpt-5.1
+- Agent name: TeacherAgent
+- Description: 답변을 평가하고 개선을 요청하는 교사 역할
+- Model: gpt-5.1
 
 Instructions:
 ```
