@@ -128,7 +128,6 @@ Embedding 모델은 텍스트를 벡터로 변환하여 의미적 검색 및 유
 2. **text-embedding-3-large 선택**
    - **text-embedding-3-large** 모델을 선택합니다.
    - 모델 상세 정보 확인:
-     - Dimensions: 3072
    
    ![text-embedding-3-large 모델 카드](../assets/02-09-embedding-model-card.png)
 
