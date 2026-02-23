@@ -284,7 +284,7 @@ Model Router를 활용하여 지능적으로 모델을 선택하는 에이전트
 2. **Web Search Tool 추가**
 
    - **Tools** 섹션에서 **+ Add** 버튼을 클릭합니다.
-   - **Web search** 옵션을 선택합니다.
+   - **Web search** 옵션을 선택한 후 **Add tool** 버튼을 클릭합니다.
    - Web Search가 활성화되었는지 확인합니다.
    
    ![Web search 도구 추가](../assets/03-20-websearch-add-tool.png)
