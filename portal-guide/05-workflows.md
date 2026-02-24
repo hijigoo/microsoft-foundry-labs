@@ -511,19 +511,13 @@ Human-in-loop는 다음 상황에서 유용합니다:
 
 1. **에이전트 구성**
 
-   이전에 만든 Sequential Workflow를 기반으로 합니다:
+   Workflows 탭에서 **Human in Loop** 선택하여 워크플로우를 생성합니다.
 
    ```
    TravelPlannerAgent → [사용자 승인] → LocalAgent → TravelSummaryAgent
    ```
 
-2. **Human Approval Point 추가**
-
-   - TravelPlannerAgent 다음에 **Human approval** 단계를 추가합니다.
-   - 사용자는 초안 여행 계획을 검토하고:
-     - ✅ 승인 → LocalAgent로 진행
-     - ❌ 거부 → TravelPlannerAgent로 돌아가서 재생성
-     - 📝 수정 요청 → 피드백과 함께 재생성
+2. 아래 캡쳐화면을 참고하여 워크플로우를 생성합니다
 
 3. **워크플로우 설정**
 
