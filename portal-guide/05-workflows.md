@@ -414,6 +414,7 @@ Instructions:
    - StudentAgent
    - TeacherAgent
    
+   (아래 내용은 지정할 필요 없음, 참고용)
    Termination condition: TeacherAgent가 [COMPLETE]를 응답할 때
    Max turns: 4 (무한 루프 방지)
    ```
