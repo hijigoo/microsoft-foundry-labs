@@ -550,6 +550,30 @@ Human-in-loop는 다음 상황에서 유용합니다:
    Timeout: 24시간 (응답 없으면 자동 거부)
    ```
 
+### Human-in-loop Workflow 생성
+
+- TravelPlannerAgent 추가
+
+   ![Human-in-Loop Workflow Preview](../assets/05-10-human-in-loop-workflow-preview-01.png)
+
+- 사용자 승인 요청 단계 추가
+  
+   ![Human-in-Loop Workflow Preview](../assets/05-10-human-in-loop-workflow-preview-02.png)
+
+   ![Human-in-Loop Workflow Preview](../assets/05-10-human-in-loop-workflow-preview-03.png)
+
+- 미승인시 TravelPlannerAgent로 돌아가는 루프 설정
+  
+   ![Human-in-Loop Workflow Preview](../assets/05-10-human-in-loop-workflow-preview-04.png)
+
+   ![Human-in-Loop Workflow Preview](../assets/05-10-human-in-loop-workflow-preview-05.png)
+
+
+- 승인 시 LocalAgent → TravelSummaryAgent로 진행
+   ![Human-in-Loop Workflow Preview](../assets/05-10-human-in-loop-workflow-preview-06.png)
+
+   ![Human-in-Loop Workflow Preview](../assets/05-10-human-in-loop-workflow-preview-07.png)
+
 ### 테스트 시나리오
 
 1. **승인 시나리오**
@@ -557,8 +581,8 @@ Human-in-loop는 다음 상황에서 유용합니다:
    ```
    사용자: 안녕
    TravelPlannerAgent: 여행 일정 초안 생성
-   [System]: 사용자 승인 대기...
-   사용자: 승인
+   [System]: 계획이 마음에 들면 '좋아' 라고 해주세요.
+   사용자: 좋아
    LocalAgent: 현지 정보 추가
    TravelSummaryAgent: 최종 요약
    ```
@@ -567,17 +591,16 @@ Human-in-loop는 다음 상황에서 유용합니다:
 
    ```
    사용자: 제주도 여행 계획 짜줘
-   TravelPlannerAgent: 초안 생성 (호텔 중심)
-   [System]: 사용자 승인 대기...
-   사용자: 거부. 펜션으로 변경해줘
-   TravelPlannerAgent: 수정된 계획 생성 (펜션 중심)
-   [System]: 사용자 승인 대기...
-   사용자: 승인
+   TravelPlannerAgent: 초안 생성
+   [System]: 계획이 마음에 들면 '좋아' 라고 해주세요.
+   사용자: 다시 해줘
+   TravelPlannerAgent: 수정된 계획 생성
+   [System]: 계획이 마음에 들면 '좋아' 라고 해주세요.
+   사용자: 좋아
    LocalAgent: 현지 정보 추가
    TravelSummaryAgent: 최종 요약
    ```
 
-   ![Human-in-Loop Workflow Preview](../assets/05-10-human-in-loop-workflow-preview.png)
 
 ### 💡 Human-in-loop 모범 사례
 
