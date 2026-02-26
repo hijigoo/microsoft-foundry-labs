@@ -217,7 +217,7 @@ Workflow {
 
 1. **Preview 모드**
 
-   - **Preview** 버튼을 클릭합니다.
+   - 오른쪽 상단에 있는 **Preview** 버튼을 클릭합니다.
 
 2. **테스트 질문**
 
@@ -414,6 +414,7 @@ Instructions:
    - StudentAgent
    - TeacherAgent
    
+   (아래 내용은 지정할 필요 없음, 참고용)
    Termination condition: TeacherAgent가 [COMPLETE]를 응답할 때
    Max turns: 4 (무한 루프 방지)
    ```
@@ -510,19 +511,13 @@ Human-in-loop는 다음 상황에서 유용합니다:
 
 1. **에이전트 구성**
 
-   이전에 만든 Sequential Workflow를 기반으로 합니다:
+   Workflows 탭에서 **Human in Loop** 선택하여 워크플로우를 생성합니다.
 
    ```
    TravelPlannerAgent → [사용자 승인] → LocalAgent → TravelSummaryAgent
    ```
 
-2. **Human Approval Point 추가**
-
-   - TravelPlannerAgent 다음에 **Human approval** 단계를 추가합니다.
-   - 사용자는 초안 여행 계획을 검토하고:
-     - ✅ 승인 → LocalAgent로 진행
-     - ❌ 거부 → TravelPlannerAgent로 돌아가서 재생성
-     - 📝 수정 요청 → 피드백과 함께 재생성
+2. 아래 캡쳐화면을 참고하여 워크플로우를 생성합니다
 
 3. **워크플로우 설정**
 
