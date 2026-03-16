@@ -8,6 +8,7 @@
 - [ModelRouterAgent 생성](#modelrouteragent-생성)
 - [FileSearchAgent 생성](#filesearchagent-생성)
 - [WebSearchAgent 생성](#websearchagent-생성)
+- [CodeInterpreterAgent 생성](#codeinterpreteragent-생성)
 - [에이전트 배포 및 호출](#에이전트-배포-및-호출)
 - [다음 단계](#다음-단계)
 
@@ -17,6 +18,7 @@
 - Model Router 기반 에이전트 구축
 - File Search 기능을 활용한 문서 기반 에이전트 생성
 - Web Search 기능을 활용한 실시간 정보 검색 에이전트 생성
+- Code Interpreter 기능을 활용한 코드 실행 에이전트 생성
 - 에이전트 배포 및 프로그래매틱 호출 방법 학습
 
 ## ⏱️ 예상 소요 시간
@@ -335,6 +337,100 @@ Model Router를 활용하여 지능적으로 모델을 선택하는 에이전트
 - Web Search tool이 활성화되어 있는지 확인
 - 최신 정보를 정확하게 검색하고 요약하는지 테스트
 - 출처 URL이 응답에 포함되어 있는지 확인
+
+---
+
+## CodeInterpreterAgent 생성
+
+Code Interpreter 기능을 활용하여 코드를 실행하고 데이터 분석, 시각화, 수학 계산 등을 수행하는 에이전트를 만듭니다.
+
+### 단계별 가이드
+
+1. **새 에이전트 생성**
+   ```
+   Agent name: CodeInterpreterAgent
+   Model: gpt-5.1
+   ```
+
+   **Instructions 설정**
+
+   ```
+   너는 Tools에 등록된 Code interpreter를 활용하여 재무 데이터를 분석하고 HTML 보고서를 생성하는 에이전트입니다.
+   
+   중요 규칙:
+   1. 첨부된 CSV 파일을 pandas로 읽어 데이터를 분석하세요
+   2. 매출, 비용, 영업이익 등 핵심 재무 지표를 계산하세요
+   3. matplotlib 또는 seaborn으로 차트를 생성하고, base64로 인코딩하여 HTML에 임베딩하세요
+   4. 분석 결과를 보기 좋은 HTML 보고서 단일 파일로 생성하세요
+   5. HTML 보고서에는 요약 테이블, 차트, 인사이트를 포함하세요
+   6. 에러 발생 시 원인을 분석하고 수정된 코드를 다시 실행하세요
+   7. 차트의 제목, 축 레이블, 범례 등 한글로 된 모든 텍스트는 영어 번역해서 작성하세요
+   ```
+
+   ![CodeInterpreterAgent 생성](../assets/03-30-codeinterpreter-create.png)
+
+2. **Code Interpreter Tool 추가**
+
+   - **Tools** 섹션에서 **+ Add** 버튼을 클릭합니다.
+   - **Code interpreter** 옵션을 선택한 후 **Add tool** 버튼을 클릭합니다.
+   - Code Interpreter가 활성화되었는지 확인합니다.
+
+   ![Code Interpreter 도구 추가](../assets/03-31-codeinterpreter-add-tool.png)
+
+3. **파일 업로드**
+
+   - Code Interpreter의 **+파일** 버튼을 눌러서 [sample/financial_data.csv](../sample/financial_data.csv) 파일을 업로드합니다.
+   - 파일이 정상적으로 업로드되었는지 확인합니다.
+
+   ![Code Interpreter 파일 업로드](../assets/03-31-codeinterpreter-file-upload.png)
+
+4. **에이전트 저장**
+   - **Save** 버튼을 클릭합니다.
+
+5. **에이전트 테스트**
+
+   **Chat 탭에서 다음 프롬프트를 입력합니다:**
+
+   ```
+   업로드된 CSV 파일을 분석해서 HTML 재무 보고서를 생성해줘.
+   보고서에 다음 내용을 포함해줘:
+   1. 월별 매출/비용/영업이익 요약 테이블
+   2. 월별 매출 및 비용 추이 라인 차트
+   3. 사업부별 매출 비중 파이 차트
+   4. 전체 기간 핵심 KPI (총매출, 총비용, 영업이익률, 최고매출 월)
+   5. 주요 인사이트 및 개선 제안
+   6. 차트의 제목, 축 레이블, 범례 등 모든 텍스트는 영어로 작성해줘
+   ```
+   → Code Interpreter가 pandas로 데이터를 분석하고 HTML 보고서를 생성합니다.
+
+   ![CodeInterpreterAgent 테스트](../assets/03-32-codeinterpreter-chat-test.png)
+   ![CodeInterpreterAgent 결과](../assets/03-32-codeinterpreter-chat-test-result.png)
+   ![CodeInterpreterAgent 결과](../assets/03-32-codeinterpreter-chat-test-result-2.png)
+
+6. **Traces 확인**
+
+   - **Traces** 탭에서 코드 실행 과정을 확인합니다.
+     - 생성된 코드
+     - 실행 결과
+     - 생성된 파일 (HTML 보고서, 이미지 등)
+     - 실행 시간
+
+   ![Code Interpreter Traces 확인](../assets/03-33-codeinterpreter-traces.png)
+   
+
+### 💡 Code Interpreter 활용 팁
+
+- **재무 분석**: 매출, 비용, 이익률 등 핵심 지표를 자동으로 계산
+- **시각화**: matplotlib, seaborn 등으로 차트를 생성하고 HTML에 임베딩
+- **보고서 생성**: 분석 결과를 단일 HTML 파일로 출력하여 공유 가능
+- **파일 첨부**: CSV, Excel 등 데이터 파일을 Chat에 첨부하여 바로 분석
+
+### ✅ 확인 사항
+
+- Code Interpreter tool이 활성화되어 있는지 확인
+- 첨부한 CSV 파일이 정상적으로 분석되는지 테스트
+- HTML 보고서 파일이 생성되고 다운로드 가능한지 확인
+- 보고서 내 차트와 테이블이 정상적으로 표시되는지 확인
 
 ---
 
