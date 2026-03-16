@@ -6,6 +6,7 @@
 
 - [Foundry IQ 개요](#foundry-iq-개요)
 - [AI Search 연결](#ai-search-연결)
+- [Storage 및 권한 설정](#storage-및-권한-설정)
 - [Knowledge Base 생성 (AI Search Index)](#knowledge-base-생성-ai-search-index)
 - [Knowledge Base 생성 (Blob Storage)](#knowledge-base-생성-blob-storage)
 - [KnowledgeAgent 통합](#knowledgeagent-통합)
@@ -15,6 +16,7 @@
 
 - Foundry IQ의 개념과 장점 이해
 - Azure AI Search 리소스 연결 및 구성
+- Storage Account 생성 및 IAM 권한 설정
 - AI Search Index 기반 Knowledge Base 생성
 - Blob Storage 기반 Knowledge Base
 - Knowledge Base를 에이전트에 통합하는 방법 학습
@@ -165,9 +167,9 @@ AI Search가 Foundry 리소스에 접근할 수 있도록 Managed Identity를 �
 
 ---
 
-## Knowledge Base 생성 (AI Search Index)
+## Storage 및 권한 설정
 
-기존 AI Search Index를 사용하여 Knowledge Base를 생성합니다.
+Knowledge Base를 생성하기 위해 Storage Account, IAM 권한, 샘플 데이터를 준비합니다.
 
 ### Storage Account와 Container 생성
 
@@ -334,6 +336,11 @@ Microsoft Foundry와 AI Search 간의 권한을 설정합니다.
 
    ![샘플 데이터 업로드](../assets/04-10-container-upload-2.png)
 
+---
+
+## Knowledge Base 생성 (AI Search Index)
+
+기존 AI Search Index를 사용하여 Knowledge Base를 생성합니다.
 
 ### Import Data Wizard 실행
 
