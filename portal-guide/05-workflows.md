@@ -604,8 +604,7 @@ Human-in-loop는 다음 상황에서 유용합니다:
    TravelPlannerAgent: 여행 일정 초안 생성
    [System]: 계획이 마음에 들면 '좋아' 라고 해주세요.
    사용자: 좋아
-   LocalAgent: 현지 정보 추가
-   TravelSummaryAgent: 최종 요약
+   TravelSummaryAgent: 일정 요약
    ```
 
 2. **거부 및 재생성 시나리오**
@@ -618,8 +617,7 @@ Human-in-loop는 다음 상황에서 유용합니다:
    TravelPlannerAgent: 수정된 계획 생성
    [System]: 계획이 마음에 들면 '좋아' 라고 해주세요.
    사용자: 좋아
-   LocalAgent: 현지 정보 추가
-   TravelSummaryAgent: 최종 요약
+   TravelSummaryAgent: 일정 요약
    ```
 
 
