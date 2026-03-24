@@ -528,7 +528,7 @@ Human-in-loop는 다음 상황에서 유용합니다:
    Steps:
    1. TravelPlannerAgent (초안 생성)
    2. Human Approval (사용자 검토)
-      3. TravelSummaryAgent (최종 요약)
+   3. TravelSummaryAgent (최종 요약)
    ```
 
 4. **Approval 설정**
