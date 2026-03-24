@@ -7,8 +7,8 @@
 - [Foundry IQ 개요](#foundry-iq-개요)
 - [AI Search 연결](#ai-search-연결)
 - [Storage 및 권한 설정](#storage-및-권한-설정)
-- [(옵션1) Knowledge Base 생성 (AI Search Index)](#knowledge-base-생성-ai-search-index)
-- [(옵션2) Knowledge Base 생성 (Blob Storage)](#knowledge-base-생성-blob-storage)
+- [(옵션1) Knowledge Base 생성 (AI Search Index)](#옵션1-knowledge-base-생성-ai-search-index)
+- [(옵션2) Knowledge Base 생성 (Blob Storage)](#옵션2-knowledge-base-생성-blob-storage)
 - [KnowledgeAgent 통합](#knowledgeagent-통합)
 - [다음 단계](#다음-단계)
 
