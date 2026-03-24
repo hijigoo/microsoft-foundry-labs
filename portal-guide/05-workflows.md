@@ -528,8 +528,7 @@ Human-in-loop는 다음 상황에서 유용합니다:
    Steps:
    1. TravelPlannerAgent (초안 생성)
    2. Human Approval (사용자 검토)
-   3. LocalAgent (승인 시 현지 정보 추가)
-   4. TravelSummaryAgent (최종 요약)
+      3. TravelSummaryAgent (최종 요약)
    ```
 
 4. **Approval 설정**
@@ -549,9 +548,29 @@ Human-in-loop는 다음 상황에서 유용합니다:
 
 - TravelPlannerAgent 추가
 
+   Save agent output message as 에 아래 입력
+   ```
+   Local.LatestOutputMessage
+   ```
+
    ![Human-in-Loop Workflow Preview](../assets/05-10-human-in-loop-workflow-preview-01.png)
 
 - 사용자 승인 요청 단계 추가
+   Question 입력란에 아래 입력
+   ```
+   계획이 마음에 들면 '좋아' 라고 답변해줘
+   ```
+
+   Save user response as 에 아래 입력
+   ```
+   Local.ConfirmedInput
+   ```
+
+   If 노트의 Condition 입력란에 아래 입력
+   ```
+   "좋아" <> Local.ConfirmedInput
+   ```
+
   
    ![Human-in-Loop Workflow Preview](../assets/05-10-human-in-loop-workflow-preview-02.png)
 
@@ -559,15 +578,22 @@ Human-in-loop는 다음 상황에서 유용합니다:
 
 - 미승인시 TravelPlannerAgent로 돌아가는 루프 설정
   
+  Go to Node 에서 Select action 에  TravelPlannerAgent(ex Agent : node-1773731818650) 선택
+
    ![Human-in-Loop Workflow Preview](../assets/05-10-human-in-loop-workflow-preview-04.png)
 
    ![Human-in-Loop Workflow Preview](../assets/05-10-human-in-loop-workflow-preview-05.png)
 
 
-- 승인 시 LocalAgent → TravelSummaryAgent로 진행
+- 승인 시 TravelSummaryAgent로 진행하도록 추가
+  
+  Input message 에 아래 입력
+   ```
+   Local.LatestOutputMessage
+   ```
+
    ![Human-in-Loop Workflow Preview](../assets/05-10-human-in-loop-workflow-preview-06.png)
 
-   ![Human-in-Loop Workflow Preview](../assets/05-10-human-in-loop-workflow-preview-07.png)
 
 ### 테스트 시나리오
 
