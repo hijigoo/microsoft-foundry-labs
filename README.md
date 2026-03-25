@@ -25,7 +25,7 @@ Microsoft Foundry의 핵심 기능을 실습을 통해 학습하는 워크샵입
 이 워크샵은 Microsoft Foundry의 새로운 포털을 사용하여 다음 내용을 다룹니다:
 
 - **모델 관리**: 다양한 AI 모델의 배포 및 Model Router 구성
-- **에이전트 개발**: File Search, Web Search, Knowledge 기반 에이전트 구축
+- **에이전트 개발**: File Search, Web Search, Code Interpreter 기반 에이전트 구축
 - **Foundry IQ**: AI Search 및 Blob Storage 기반 지식 베이스 구축
 - **워크플로우**: Sequential, Group Chat, Human-in-loop 워크플로우 설계
 - **평가**: 에이전트 성능 평가 및 분석
@@ -74,9 +74,9 @@ Microsoft Foundry의 핵심 기능을 실습을 통해 학습하는 워크샵입
 ### 03. 에이전트 개발
 **[Portal Guide](./portal-guide/03-agents.md)** | **[Code Guide](./code-guide/03-agents.ipynb)**
 - ModelRouterAgent 생성
-- FileSearchAgent 구축
-- WebSearchAgent 구축
-- KnowledgeAgent 구축
+- FileSearchAgent 생성
+- WebSearchAgent 생성
+- CodeInterpreterAgent 생성
 - 에이전트 배포 및 호출
 
 ### 04. Foundry IQ
