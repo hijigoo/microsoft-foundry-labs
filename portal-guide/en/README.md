@@ -9,7 +9,7 @@ A hands-on workshop to learn Microsoft Foundry's core features through practical
 This workshop covers the following topics using Microsoft Foundry's new portal:
 
 - **Model Management**: Deploy various AI models and configure Model Router
-- **Agent Development**: Build File Search, Web Search, and Knowledge-based agents
+- **Agent Development**: Build File Search, Web Search, and Code Interpreter-based agents
 - **Foundry IQ**: Construct knowledge base using AI Search and Blob Storage
 - **Workflows**: Design Sequential, Group Chat, and Human-in-loop workflows
 - **Evaluations**: Evaluate and analyze agent performance
@@ -57,7 +57,7 @@ Each module is structured for independent practice:
 - Create ModelRouterAgent
 - Build FileSearchAgent
 - Build WebSearchAgent
-- Build KnowledgeAgent
+- Build CodeInterpreterAgent
 - Deploy and invoke agents
 
 ### [04. Foundry IQ](./04-foundry-iq.md)
