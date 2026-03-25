@@ -76,7 +76,7 @@ Microsoft Foundry의 핵심 기능을 실습을 통해 학습하는 워크샵입
 - ModelRouterAgent 생성
 - FileSearchAgent 구축
 - WebSearchAgent 구축
-- KnowledgeAgent 구축
+- CodeInterpreterAgent 구축
 - 에이전트 배포 및 호출
 
 ### 04. Foundry IQ
