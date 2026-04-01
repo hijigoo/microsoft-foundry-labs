@@ -57,7 +57,7 @@ Each module is structured for independent practice:
 - Create ModelRouterAgent
 - Build FileSearchAgent
 - Build WebSearchAgent
-- Build KnowledgeAgent
+- Build CodeInterpreterAgent
 - Deploy and invoke agents
 
 ### [04. Foundry IQ](./04-foundry-iq.md)
